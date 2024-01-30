@@ -1,37 +1,37 @@
-# My Awesome Project
+# 1
 
 ## Description
-My Awesome Project is a web application that allows users to create, edit, and organize their to-do lists. It's designed to help individuals stay organized and manage their tasks efficiently.
+1
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-[Apache License](https://www.apache.org/licenses/LICENSE-2.0) 
+[MIT License](https://opensource.org/licenses/MIT) 
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
-To install My Awesome Project, follow these steps: Clone the GitHub repository: git clone, https://github.com/yourusername/my-awesome-project.git, Navigate to the project folder: cd my-awesome-project, Install dependencies: npm install, and finally Start the application: npm start
+1
 
 ## Usage
-Using My Awesome Project is simple: Sign up or log in to your account, Create a new to-do list and add tasks to it, Edit, delete, or mark tasks as completed. Organize your lists and tasks for better productivity.
+1
 
 
 ## License
-![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-This project is licensed under the Apache License. 
+This project is licensed under the MIT License. 
 See the [License](LICENSE) file for details.
  
 
 ## Contributing
-To contribute to My Awesome Project, follow these steps: Fork the repository on GitHub. Create a new branch for your feature or bug fix. Make your changes and commit them with clear and concise messages. Push your changes to your forked repository. Open a pull request, and our team will review it.
+1
 
 ## Tests
-To run tests for My Awesome Project, use the following command: npm test
+1
 
 ## Questions
-- If you have any questions, you can reach me on GitHub: [GitHub Profile](https://github.com/AKAYER19)
-- For additional questions, contact me via email: akayeauto@gmail.com
+- If you have any questions, you can reach me on GitHub: <a href="https://github.com/1" target="_blank">GitHub Profile</a>
+- For additional questions, contact me via email: 1
     

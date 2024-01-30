@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
-const fs = require('fs');
-const inquirer = require('inquirer');
-const { renderLicenseBadge, renderLicenseLink, renderLicenseSection } = require('./utils/generateMarkdown');
-const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs'); // File System module
+const inquirer = require('inquirer'); // Inquirer module
+const { renderLicenseBadge, renderLicenseLink, renderLicenseSection } = require('./utils/generateMarkdown');  // Import the functions from generateMarkdown.js
+const generateMarkdown = require('./utils/generateMarkdown');   // Import the entire generateMarkdown.js file
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -57,20 +57,15 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   // Use fs.writeFileSync to write data to a file with the given fileName
-  fs.writeFileSync(fileName, data, (err) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log('README.md has been generated successfully!');
-    }
-  });
+  fs.writeFileSync(fileName, data);
+  console.log('Entries have been captured and written to the README.md!');
 }
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer
-    .prompt(questions)
-    .then((answers) => {
+  inquirer // Use inquirer to prompt the user with the questions array
+    .prompt(questions)  // Pass the questions array as the argument
+    .then((answers) => {  // Use the answers to generate the README content
       // Generate the README content based on 'answers' using the imported function
       const readmeContent = generateMarkdown(answers);
 

@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
     return '![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)';
   } else if (license === 'Apache') {
     return '![Apache License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
-  } // Add more license options as needed
+  } 
   return ''; // Return an empty string if no license is selected
 }
 
@@ -14,7 +14,7 @@ function renderLicenseLink(license) {
     return '[MIT License](https://opensource.org/licenses/MIT)';
   } else if (license === 'Apache') {
     return '[Apache License](https://www.apache.org/licenses/LICENSE-2.0)';
-  } // Add more license options as needed
+  } 
   return ''; // Return an empty string if no license is selected
 }
 
@@ -33,8 +33,8 @@ See the [License](LICENSE) file for details.
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  const licenseBadge = renderLicenseBadge(data.license);
+function generateMarkdown(data) { // data is the user input from the inquirer prompts
+  const licenseBadge = renderLicenseBadge(data.license); // Generate the license badge
 
   return `# ${data.title}
 
@@ -64,9 +64,9 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-- If you have any questions, you can reach me on GitHub: [GitHub Profile](https://github.com/${data.githubUsername})
+- If you have any questions, you can reach me on GitHub: <a href="https://github.com/${data.githubUsername}" target="_blank">GitHub Profile</a>
 - For additional questions, contact me via email: ${data.email}
     `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; // Export the generateMarkdown function
