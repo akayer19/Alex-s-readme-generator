@@ -2,14 +2,56 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
-      },
+  {
+    type: 'input',
+    name: 'title',
+    message: 'What is the title of your project?',
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: 'Provide a description of your project:',
+  },
+  {
+    type: 'input',
+    name: 'installation',
+    message: 'How can someone install your project?',
+  },
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'How can someone use your project?',
+  },
+  {
+    type: 'input',
+    name: 'contributing',
+    message: 'How can others contribute to your project?',
+  },
+  {
+    type: 'input',
+    name: 'tests',
+    message: 'How can someone test your project?',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Choose a license for your project:',
+    choices: ['MIT', 'Apache', 'GPL', 'Other'],
+  },
+  {
+    type: 'input',
+    name: 'githubUsername',
+    message: 'What is your GitHub username?',
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address for contact?',
+  },
 ];
 
 // TODO: Create a function to write README file
@@ -26,58 +68,67 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-      .prompt(questions)
-      .then((answers) => {
-        // Generate the README content based on 'answers'
-        const readmeContent = generateREADME(answers);
-  
-        // Write the README file
-        writeToFile('README.md', readmeContent); // Pass readmeContent as the second argument
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      // Generate the README content based on 'answers' using the imported function
+      const readmeContent = generateMarkdown(answers);
+
+      // Write the README file
+      writeToFile('README.md', readmeContent); // Pass readmeContent as the second argument
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
 // Function to generate README content based on user answers
 // Function to generate README content based on user answers
-function generateREADME(answers) {
-    return `
-# ${answers.title}
+// Function to generate markdown for README
+// Function to generate markdown for README
+function generateMarkdown(data) {
+  // Call renderLicenseLink to get the license link
+  const licenseLink = renderLicenseLink(data.license);
+
+  return `# ${data.title}
 
 ## Description
-- Add a description of your project here.
+${data.description}
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [License](#license) // Place License section here
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
-- Provide installation instructions here.
+${data.installation}
 
 ## Usage
-- Provide usage information here.
+${data.usage}
 
 ## License
-- Add a badge for your license here (e.g., MIT, Apache, etc.).
-- Include details about your chosen license.
+${licenseLink} // Insert the license link here
+
+${renderLicenseSection(data.license)} // Include the license section here
 
 ## Contributing
-- Provide contribution guidelines here.
+${data.contributing}
 
 ## Tests
-- Explain how to run tests for your application here.
+${data.tests}
 
 ## Questions
-- If you have any questions, you can reach me on GitHub: [GitHub Profile](https://github.com/${answers.githubUsername})
-- For additional questions, contact me via email: ${answers.email}
+- If you have any questions, you can reach me on GitHub: [GitHub Profile](https://github.com/${data.githubUsername})
+- For additional questions, contact me via email: ${data.email}
     `;
 }
+
+module.exports = generateMarkdown;
+
+
 
 // Function call to initialize app
 init();
