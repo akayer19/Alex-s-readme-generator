@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
-
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { renderLicenseBadge, renderLicenseLink, renderLicenseSection } = require('./utils/generateMarkdown');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
@@ -56,15 +56,15 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    // Use fs.writeFileSync to write data to a file with the given fileName
-    fs.writeFileSync(fileName, data, (err) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log('README.md has been generated successfully!');
-      }
-    });
-  }
+  // Use fs.writeFileSync to write data to a file with the given fileName
+  fs.writeFileSync(fileName, data, (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log('README.md has been generated successfully!');
+    }
+  });
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -81,54 +81,6 @@ function init() {
       console.error(error);
     });
 }
-
-// Function to generate README content based on user answers
-// Function to generate README content based on user answers
-// Function to generate markdown for README
-// Function to generate markdown for README
-function generateMarkdown(data) {
-  // Call renderLicenseLink to get the license link
-  const licenseLink = renderLicenseLink(data.license);
-
-  return `# ${data.title}
-
-## Description
-${data.description}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license) // Place License section here
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-${data.installation}
-
-## Usage
-${data.usage}
-
-## License
-${licenseLink} // Insert the license link here
-
-${renderLicenseSection(data.license)} // Include the license section here
-
-## Contributing
-${data.contributing}
-
-## Tests
-${data.tests}
-
-## Questions
-- If you have any questions, you can reach me on GitHub: [GitHub Profile](https://github.com/${data.githubUsername})
-- For additional questions, contact me via email: ${data.email}
-    `;
-}
-
-module.exports = generateMarkdown;
-
-
 
 // Function call to initialize app
 init();

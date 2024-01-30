@@ -1,4 +1,3 @@
-
 # 1
 
 ## Description
@@ -7,7 +6,7 @@
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+[MIT License](https://opensource.org/licenses/MIT) 
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -18,9 +17,13 @@
 ## Usage
 4
 
+
 ## License
-- Add a badge for your license here (e.g., MIT, Apache, etc.).
-- Include details about your chosen license: MIT
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+This project is licensed under the MIT License. 
+See the [License](LICENSE) file for details.
+ 
 
 ## Contributing
 5
