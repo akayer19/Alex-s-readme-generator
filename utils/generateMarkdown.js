@@ -47,6 +47,7 @@ ${data.description}
 ${renderLicenseLink(data.license)} 
 - [Contributing](#contributing)
 - [Tests](#tests)
+- [Screenshot](#screenshot)
 - [Questions](#questions)
 
 ## Installation
@@ -62,6 +63,9 @@ ${data.contributing}
 
 ## Tests
 ${data.tests}
+
+## Screenshot
+![Screenshot](./utils/screenshot.png)
 
 ## Questions
 - If you have any questions, you can reach me on GitHub: <a href="https://github.com/${data.githubUsername}" target="_blank">GitHub Profile</a>
