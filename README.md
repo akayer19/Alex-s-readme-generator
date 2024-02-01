@@ -1,12 +1,12 @@
 # Alex’s README.md Generator
 
 ## Description
-"Alex’s README.md Generator" is a streamlined and efficient command-line tool designed to simplify the process of creating professional and comprehensive README files for software projects. Understanding that a well-documented README is the gateway to engaging users and contributors, this generator prompts users with a series of questions to effortlessly compile the essential components of a quality README, including project titles, descriptions, installation instructions, usage examples, contribution guidelines, license information, and contact details. This tool is perfect for developers of all skill levels who wish to save time on project documentation without sacrificing quality. With a focus on user experience, it offers a sleek interface and a straightforward process that ensures your project's first impression is a lasting one.
+"Alex’s README.md Generator" is a streamlined and efficient command-line tool designed to simplify the process of creating professional and comprehensive README files for software projects. Understanding that a well-documented README is the gateway to engaging users and contributors, this generator prompts users with a series of questions to effortlessly compile the essential components of a quality README, including project titles, descriptions, installation instructions, usage examples, contribution guidelines, license information, and contact details. This tool is perfect for developers of all skill levels who wish to save time on project documentation without sacrificing quality. With a focus on user experience, it offers a sleek interface and a straightforward process that ensures your project's first impression is a lasting one. 
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-[Apache License](https://www.apache.org/licenses/LICENSE-2.0) 
+- [Apache License](https://www.apache.org/licenses/LICENSE-2.0) 
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Screenshot](#screenshot)
@@ -36,6 +36,6 @@ We currently depend on manual testing to ensure the functionality and robustness
 ![Screenshot](./utils/screenshot.png)
 
 ## Questions
-- If you have any questions, you can reach me on GitHub: <a href="https://github.com/Akayer19" target="_blank">GitHub Profile</a>
+- If you have any questions, you can reach me on GitHub: <a href="https://github.com/akayer19" target="_blank">GitHub Profile</a>
 - For additional questions, contact me via email: akayeauto@gmail.com
     
